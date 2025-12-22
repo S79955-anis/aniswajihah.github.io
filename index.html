@@ -94,22 +94,23 @@
         .app-btn {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: var(--color-accent);
             color: var(--color-white);
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--color-accent);
+            text-align: center;
         }
 
         .app-btn:hover {
-            background-color: var(--color-white);
+            background-color: transparent;
             color: var(--color-accent);
-            border-color: var(--color-accent);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(111, 66, 193, 0.2);
         }
 
         /* Specific Layout Overrides for Desktop (3-column grid) */
@@ -235,7 +236,7 @@
                 <p><strong>Title:</strong> Analyzing the Optimal Soil pH for Local Herb Growth.</p>
                 <p>Preliminary research on the effect of $\text{CaCO}_3$ on soil acidity for improving yield in *Curcuma longa* (Turmeric).</p>
             </div>
-            <a href="https://s79955-anis.github.io/app.html" class="app-btn">Try My Focus Timer App</a>
+            <a href="https://s79955-anis.github.io/focus-timer-app/app.html" class="app-btn">Try My Focus Timer App</a>
         </div>
 
         <div class="bento-card" id="card-hobby">
