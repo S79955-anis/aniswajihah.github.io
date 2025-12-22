@@ -90,38 +90,47 @@
             text-decoration: underline;
         }
 
+        /* Button Styling for Focus Timer App */
+        .app-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .app-btn:hover {
+            background-color: var(--color-white);
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+
         /* Specific Layout Overrides for Desktop (3-column grid) */
 
-        /* Card 1 (Profile): Large box (2x2) - BACKGROUND IMAGE APPLIED HERE */
         #card-profile {
             grid-column: 1 / 3; 
             grid-row: 1 / 3; 
-            
-            /* --- BACKGROUND IMAGE CODE --- */
             background-image: 
-                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Dark overlay for text readability */
-                url('bg.jpg'); /* The background image file */
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('bg.jpg'); 
             background-size: cover;
             background-position: center;
-            background-color: var(--color-black); /* Fallback color */
-            
-            /* Set text colors to white for contrast */
+            background-color: var(--color-black);
             color: var(--color-white); 
         }
         #card-profile h1, #card-profile .main-info p, #card-profile h3, #card-profile .tagline {
-            color: var(--color-white); /* Ensure primary text is white */
+            color: var(--color-white);
         }
-        #card-profile .main-info p {
-            color: var(--color-white); /* Keep the program text white */
-        }
-        #card-profile .social-links a {
-            color: var(--color-accent-light); /* Light accent color for links */
-        }
-        #card-profile .main-info h1 {
-            font-size: 2.5rem;
-        }
+        #card-profile .main-info h1 { font-size: 2.5rem; }
+        #card-profile .social-links a { color: var(--color-accent-light); }
         
-        /* Card 2 (Location): Small box (1x1) */
         #card-location {
             grid-column: 3 / 4;
             grid-row: 1 / 2;
@@ -132,7 +141,6 @@
             justify-content: center;
         }
 
-        /* Card 3 (Subjects): 1x1 */
         #card-tech-stack {
             grid-column: 3 / 4;
             grid-row: 2 / 3; 
@@ -142,25 +150,24 @@
              list-style-type: '🌿 '; 
         }
 
-        /* Card 4 (Case Study) - 1x1 */
         #card-case-study {
             grid-column: 1 / 2;
             grid-row: 3 / 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        /* Card 5 (Hobby) - 1x1 */
         #card-hobby {
             grid-column: 2 / 3;
             grid-row: 3 / 4;
         }
 
-        /* Card 7 (Reflection - NEW CARD) - 1x1 */
         #card-reflection {
             grid-column: 3 / 4;
             grid-row: 3 / 4;
         }
 
-        /* Card 6 (Playlist): Wide box (3x1) - Spans the entire bottom row (R4) */
         #card-playlist {
             grid-column: span 3;
             grid-row: 4 / 5; 
@@ -183,14 +190,6 @@
                 grid-column: auto !important;
                 grid-row: auto !important;
                 transform: none !important; 
-            }
-
-            #card-profile {
-                background-image: 
-                    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                    url('bg.jpg'); 
-                background-size: cover;
-                background-position: center;
             }
         }
     </style>
@@ -231,9 +230,12 @@
         </div>
 
         <div class="bento-card" id="card-case-study">
-            <h3>Recent Project</h3>
-            <p><strong>Title:</strong> Analyzing the Optimal Soil pH for Local Herb Growth.</p>
-            <p>Preliminary research on the effect of $\text{CaCO}_3$ on soil acidity for improving yield in *Curcuma longa* (Turmeric).</p>
+            <div>
+                <h3>Recent Project</h3>
+                <p><strong>Title:</strong> Analyzing the Optimal Soil pH for Local Herb Growth.</p>
+                <p>Preliminary research on the effect of $\text{CaCO}_3$ on soil acidity for improving yield in *Curcuma longa* (Turmeric).</p>
+            </div>
+            <a href="https://s79955-anis.github.io/app.html" class="app-btn">Try My Focus Timer App</a>
         </div>
 
         <div class="bento-card" id="card-hobby">
@@ -250,7 +252,7 @@
         <div class="bento-card" id="card-playlist">
             <h3>Study Flow Playlist</h3>
             <p>Focus Music for Late Nights (Lofi Hip Hop Mix)</p>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1xOqGUkyxGQRdCvGpvWKmL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Ueb9CxcYQH?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
     </div>
